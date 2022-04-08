@@ -23,6 +23,15 @@ function maxItemAssociation(arr){
 		}
 	  }
 
-	for (let itemSet of groups) alert(Array.from(itemSet).sort());
-	}
+		let result = [];
+
+		for (let itemSet of groups) result.push(Array.from(itemSet).sort());
+		result.sort(function(a, b) {
+			return b.length - a.length || a[0] > b[0];
+		  });
+
+		return result[0];
+	} else {
+		return "Массив не определен"
+  }
 }
