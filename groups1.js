@@ -31,7 +31,9 @@ function maxItemAssociation(arr){
 		  });
 
 		return result[0];
+		
 	} else {
+		
 		return "Массив не определен"
   }
 }
